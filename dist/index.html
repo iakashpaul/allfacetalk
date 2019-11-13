@@ -69,25 +69,29 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
         <script src="https://cdn.webrtc-experiment.com/getMediaElement.js"></script>
         <script src="https://cdn.webrtc-experiment.com:443/FileBufferReader.js"></script>
-        <script src="https://webrtcexperiment-webrtc.netdna-ssl.com/MediaStreamRecorder.js"></script>
+        <script src="https://cdn.webrtc-experiment.com/MediaStreamRecorder.js"> </script>
         <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-storage.js"></script>
-        <script src="https://cdn.webrtc-experiment.com/hark.js"></script>
-        <script>
-            // Initialize Firebase
-            var config = {
-                apiKey: "AIzaSyDbMU2SQny4EGV5Ilb-rdA8GVcSRdFn4w8",
-                authDomain: "technj-demo.firebaseapp.com",
-                databaseURL: "https://technj-demo.firebaseio.com",
-                projectId: "technj-demo",
-                storageBucket: "technj-demo.appspot.com",
-                messagingSenderId: "746262040963"
-            };
-            firebase.initializeApp(config);
-        </script>
+            <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-storage.js"></script>
+            <script src="https://cdn.webrtc-experiment.com/hark.js"></script>
+            <script>
+                // Your web app's Firebase configuration
+                var firebaseConfig = {
+                  apiKey: "AIzaSyAiFbnJ4p7hznsv2SkK5kwaXqVXx43Ccrk",
+                  authDomain: "allfacetalk.firebaseapp.com",
+                  databaseURL: "https://allfacetalk.firebaseio.com",
+                  projectId: "allfacetalk",
+                  storageBucket: "allfacetalk.appspot.com",
+                  messagingSenderId: "226043622047",
+                  appId: "1:226043622047:web:0ed914f07b43980bcba8aa",
+                  measurementId: "G-PB9LSG997G"
+                };
+                // Initialize Firebase
+                firebase.initializeApp(firebaseConfig);
+                // firebase.analytics();
+              </script>
         <script>
             // ......................................................
             // .......................UI Code........................
@@ -184,7 +188,7 @@
             var connection = new RTCMultiConnection();
             connection.enableLogs = true;
             // by default, socket.io server is assumed to be deployed on your own URL
-            connection.socketURL = 'https://7f6e4c15.ngrok.io/';
+            connection.socketURL = 'https://socket-rtcm.herokuapp.com';
 
             // comment-out below line if you do not have your own socket.io server
             // connection.socketURL = 'https://rtcmulticonnection.herokuapp.com:443/';
